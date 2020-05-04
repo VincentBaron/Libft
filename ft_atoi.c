@@ -6,7 +6,7 @@
 /*   By: vbaron <vbaron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 13:10:31 by vbaron            #+#    #+#             */
-/*   Updated: 2020/05/04 14:48:46 by vbaron           ###   ########.fr       */
+/*   Updated: 2020/05/04 18:58:28 by vbaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,9 @@ int	ft_atoi(const char *nptr)
 		nbr = nbr * 10 + (nptr[i] - 48);
 		i++;
 	}
+	if (nbr < 0 && sign > 0)
+		return (-1);
+	else if (nbr < 0 && sign < 0 && nbr * sign != -2147483648)
+		return (0);
 	return ((nbr * sign));
 }
