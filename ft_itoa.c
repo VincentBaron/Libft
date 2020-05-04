@@ -24,7 +24,7 @@ char	*alloc_itoa(unsigned int n, int size, int sign)
 		itoa[size] = '0';
 	while (n > 0)
 	{
-	itoa[size] = n % 10 + 48;
+		itoa[size] = n % 10 + 48;
 		size--;
 		n /= 10;
 	}
