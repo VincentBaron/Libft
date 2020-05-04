@@ -6,7 +6,7 @@
 /*   By: vbaron <vbaron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 13:10:31 by vbaron            #+#    #+#             */
-/*   Updated: 2020/05/04 18:58:28 by vbaron           ###   ########.fr       */
+/*   Updated: 2020/05/04 19:03:28 by vbaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,7 @@ int	ft_atoi(const char *nptr)
 	i = 0;
 	nbr = 0;
 	sign = 1;
-	while (nptr[i] == '\t' || nptr[i] == '\n'
-		|| nptr[i] == '\r' || nptr[i] == '\v'
-		|| nptr[i] == '\f' || nptr[i] == ' ')
+	while (nptr[i] && (nptr[i] == 32 || (nptr[i] >= 9 && nptr[i] <= 13)))
 		i++;
 	if (nptr[i] == '+' || nptr[i] == '-')
 	{
